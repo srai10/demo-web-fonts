@@ -1,0 +1,40 @@
+/*There are three main ways to bring in fonts to our projects
+1. use a system font/font stack (something the user already has installed on their machine)
+2. use an online font library (such as google fonts) 
+3. use a custom, self-hosted font *note this is not the best option for performance */
+
+@font-face {
+    font-family: 'typewriter';
+    src: url(../fonts/veteran_typewriter_regular-webfont.woff2) format('woff2'),
+         url(../fonts/veteran_typewriter_regular-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+    /*for performance reasons and to avoid invisible text during font loading */
+    font-display: swap;
+
+}
+
+body {
+/* place the base, paragraph font styling on the body element */
+font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+font-family: 'typewriter', Courier New, monospace;
+background-color: #dedcda;
+
+}
+
+h2 {
+    font-family:'Beth Ellen', cursive;
+    color: #3b373f;
+
+}
+
+section {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+    /* when rotating the flex container, the justify-content and align-items also rotate */
+    justify-content: center;
+    align-items: center;
+}
